@@ -20,6 +20,7 @@
             <div>
                 <p>{{distrito.nombre}}</p>
                 <p>{{distrito.cantidad_votantes}}</p>
+                <p>{{distrito.votos}}</p>
                 <a href="{% url 'distrital' distrito.id %}">{{distrito}}</a><br>
             </div>
         {% endfor %}
