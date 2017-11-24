@@ -1,14 +1,25 @@
-<!--
+<html>
+    <!--
 No es necesario modificar el template si los nombres
 en el context de la view son iguales a los aqui usados
 -->
+<head>
+    
+    </head>
 
+    
+<body>    
+    {% for distrito in distrito %}
+    <h1>Distrito: {{distrito.nombre}}</h1>
+    <ul>
+        <li>Tamaño del padrón: {{distrito.cantidad_votantes}}</li>
+        <li>Porcentaje de votantes: {{distrito.porcentaje}} </li>
+        <li>Total de votos del distrito: {{total_votantes}} </li>
+        <li>Candidato ganador: {{ganador}} </li>
 
-<h1>Distrito: {{distrito}}</h1>
-<ul>
-<li>Tamaño del padrón: {{distrito.cantidad_votantes}}</li>
-<li>Porcentaje de votantes: {{porcentaje_votantes}} </li>
-<li>Total de votos del distrito: {{total_votantes}} </li>
-<li>Candidato ganador: {{ganador}} </li>
+    </ul>
+    {% endfor %}
+    
+</body>    
 
-</ul>
+</html>
