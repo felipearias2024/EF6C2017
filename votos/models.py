@@ -27,14 +27,20 @@ class Candidato(models.Model):
     #TODO Completar segun consideraciones del desarrollador
     En este comentario escribir por que se decide modelar de esta
     forma la clase
+    se hace de esta forma porque el candidato debe tener nombre y apellido, pero 
+    ademas debe pertenecer a un distrito
     """
-    pass
-
+    distritro = models.ForeignKey(Distrito)
+    nombre = models.CharField(max_length=20)
+    apellido = models.CharField(max_length=20)
 
 class Votos(models.Model):
     """
     #TODO Completar segun consideraciones del desarrollador
     En este comentario escribir por que se decide modelar de esta
     forma la clase
+    se hace de esta forma porque se necesita una cantidad de votos(que puede ser nula) y
+    se debe relacionar con los candidatos para saber a que candidato perteneces cada voto
     """
-    pass
+    candidato = models.ForeignKey(Candidato)
+    cantidad = models.IntegerField(default=0, null=True)

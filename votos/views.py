@@ -2,6 +2,7 @@
 from __future__ import unicode_literals
 
 from django.shortcuts import render
+from django.db.models import Count
 
 # Create your views here.
 from votos.models import *
@@ -17,10 +18,10 @@ def resultado_global(request):
     Porcentaje de votos nulos
     Total de votos de la elección
     """
+    votos
     context={}
-    context['distritos'] = Distrito.objects.all()
+    context['distritos']
     #TODO TU CODIGO AQUI
-
     return render(request,'global.html',context)
 
 
@@ -34,7 +35,8 @@ def resultado_distrital(request):
     Candidato ganador
     """
     context={}
-
     #TODO TU CODIGO AQUI
+     
+    
 
     return render(request,'distrital.html',context)
